@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rastreamento de Pedido</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      background: #fff;
+      padding: 20px 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .timeline {
+      position: relative;
+      padding-left: 40px;
+    }
+    .step {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .step:last-child {
+      margin-bottom: 0;
+    }
+    .circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #ccc;
+      position: absolute;
+      left: -40px;
+      top: 0;
+    }
+    .step.active .circle {
+      background: #4caf50;
+    }
+    .line {
+      position: absolute;
+      width: 3px;
+      background: #ccc;
+      top: 20px;
+      left: -31px;
+      bottom: -30px;
+    }
+    .step:last-child .line {
+      display: none;
+    }
+    .label {
+      font-size: 16px;
+      color: #555;
+    }
+    .step.active .label {
+      color: #000;
+      font-weight: bold;
+    }
+    .date {
+      font-size: 13px;
+      color: #888;
+      margin-top: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Rastreamento do Pedido</h2>
+    <div class="timeline">
+      <div class="step active">
+        <div class="circle"></div>
+        <div class="line"></div>
+        <div class="label">Pedido confirmado</div>
+        <div class="date">18/08/2025 - 10:00</div>
+      </div>
+      <div class="step active">
+        <div class="circle"></div>
+        <div class="line"></div>
+        <div class="label">Enviado para transportadora</div>
+        <div class="date">19/08/2025 - 08:30</div>
+      </div>
+      <div class="step active">
+        <div class="circle"></div>
+        <div class="line"></div>
+        <div class="label">Em trânsito</div>
+        <div class="date">19/08/2025 - 14:15</div>
+      </div>
+      <div class="step">
+        <div class="circle"></div>
+        <div class="line"></div>
+        <div class="label">Saiu para entrega</div>
+        <div class="date">--/--/----</div>
+      </div>
+      <div class="step">
+        <div class="circle"></div>
+        <div class="label">Entregue</div>
+        <div class="date">--/--/----</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
